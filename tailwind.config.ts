@@ -52,16 +52,48 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
+				// Qotaf Brand Colors
+				qotaf: {
+					green: {
+						DEFAULT: 'hsl(var(--qotaf-green))',
+						light: 'hsl(var(--qotaf-green-light))',
+						dark: 'hsl(var(--qotaf-green-dark))'
+					},
+					blue: {
+						DEFAULT: 'hsl(var(--qotaf-blue))',
+						light: 'hsl(var(--qotaf-blue-light))',
+						dark: 'hsl(var(--qotaf-blue-dark))'
+					}
+				},
+				success: {
+					DEFAULT: 'hsl(var(--success))',
+					foreground: 'hsl(var(--success-foreground))'
+				},
+				info: {
+					DEFAULT: 'hsl(var(--info))',
+					foreground: 'hsl(var(--info-foreground))'
+				},
+				warning: {
+					DEFAULT: 'hsl(var(--warning))',
+					foreground: 'hsl(var(--warning-foreground))'
 				}
+			},
+			fontFamily: {
+				arabic: ['Cairo', 'Amiri', 'Noto Kufi Arabic', 'sans-serif'],
+				sans: ['Cairo', 'system-ui', 'sans-serif']
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-soft': 'var(--gradient-soft)',
+				'gradient-card': 'var(--gradient-card)'
+			},
+			boxShadow: {
+				'soft': 'var(--shadow-soft)',
+				'card': 'var(--shadow-card)',
+				'float': 'var(--shadow-float)'
+			},
+			transitionTimingFunction: {
+				'smooth': 'var(--transition-smooth)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

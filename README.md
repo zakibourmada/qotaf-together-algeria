@@ -1,73 +1,127 @@
-# Welcome to your Lovable project
+# قطاف | Qotaf
 
-## Project info
+**Arabic-first crowdsourcing platform for collecting plastic bottles in Algeria**
 
-**URL**: https://lovable.dev/projects/db24b3de-d4a8-4076-9397-e17d16419950
+معاً نجمع القوارير البلاستيكية لمساعدة الجزائر - Together we collect plastic bottles to help Algeria
 
-## How can I edit this code?
+## 🌟 Features
 
-There are several ways of editing your application.
+- **RTL by default** - Arabic-first with English toggle
+- **Mobile-first responsive design** - Beautiful on all devices  
+- **Role-based access** - Citizen, Volunteer, Association, Sports Facility, Public
+- **Mock backend ready** - Complete mock services and data
+- **Accessible UI** - WCAG AA compliant components
+- **Open source** - Built for the community
 
-**Use Lovable**
+## 🚀 Quick Start
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/db24b3de-d4a8-4076-9397-e17d16419950) and start prompting.
+```bash
+# Install dependencies
+npm install
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
+
+# Build for production  
+npm run build
 ```
 
-**Edit a file directly in GitHub**
+## 🎨 Design System
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+The entire visual identity is derived from the Qotaf logo:
+- **Primary Green**: `hsl(123 46% 34%)` - من الشعار
+- **Accent Blue**: `hsl(199 89% 48%)` - من الشعار  
+- **Arabic Typography**: Cairo font family
+- **Rounded corners**: Soft, approachable design
+- **Semantic tokens**: All colors defined in design system
 
-**Use GitHub Codespaces**
+## 🏗️ Architecture
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```
+src/
+├── components/
+│   ├── ui/           # Shadcn components + enhanced variants
+│   ├── qotaf/        # App-specific components
+│   └── layout/       # Navigation, footer
+├── contexts/         # Language & app state
+├── lib/             # Utilities & i18n
+├── services/        # Mock API services
+└── pages/           # Route components
+```
 
-## What technologies are used for this project?
+## 🌐 Internationalization
 
-This project is built with:
+- **Default**: Arabic (RTL)  
+- **Toggle**: English (LTR)
+- **Semantic keys**: Extensible translation system
+- **Direction aware**: Components adapt to RTL/LTR
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 📱 Core Flows (Implemented)
 
-## How can I deploy this project?
+### ✅ Landing Page
+- Hero with clear value proposition
+- National KPI cards with mock data
+- Feature showcase  
+- Role selection interface
+- Call-to-action sections
 
-Simply open [Lovable](https://lovable.dev/projects/db24b3de-d4a8-4076-9397-e17d16419950) and click on Share -> Publish.
+### ✅ Components Ready
+- `Logo` - Adaptive size variants
+- `KPICard` - Statistics display
+- `RoleSelector` - User role selection
+- `RequestCard` - Pickup request display
+- `StatusChip` - Request status indicators  
+- `MapPlaceholder` - Ready for Leaflet integration
+- `QRCodePlaceholder` - Ready for QR generation
 
-## Can I connect a custom domain to my Lovable project?
+### 🔄 Next Steps (Mock APIs Ready)
+- Role-based dashboards
+- Authentication flow
+- Map integration (Leaflet + OpenStreetMap)
+- QR code generation/scanning
+- Real-time updates
 
-Yes, you can!
+## 🎯 User Roles
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+1. **مواطن (Citizen)** - Store bottles, request pickup
+2. **متطوع (Volunteer)** - Accept nearby requests  
+3. **جمعية (Association)** - Collection point management
+4. **منشأة رياضية (Sports Facility)** - Bulk contributions
+5. **عام (Public)** - View stats and leaderboard
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 🛠️ Tech Stack
+
+- **Framework**: React + Vite + TypeScript
+- **Styling**: TailwindCSS + Custom Design System
+- **Components**: Shadcn/ui (enhanced)
+- **State**: React Context + Mock Services
+- **Icons**: Lucide React
+- **Fonts**: Cairo (Google Fonts)
+
+## 🌍 Environment Setup
+
+Create `.env.local` for future integrations:
+
+```bash
+# Maps (future)
+VITE_MAPBOX_TOKEN=your_token_here
+
+# API (future)  
+VITE_API_BASE_URL=https://api.qotaf.org
+
+# QR Generation (future)
+VITE_QR_SERVICE_URL=your_service_here
+```
+
+## 🤝 Contributing
+
+This is an open-source project for Algeria. Contributions welcome!
+
+## 📄 License
+
+Open source - Built with ❤️ for Algeria
+
+---
+
+**إنجاز**: واجهة كاملة جاهزة للتطوير مع نظام تصميم جميل مستوحى من الشعار
+**Achievement**: Complete frontend ready for development with beautiful logo-inspired design system
