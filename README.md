@@ -116,6 +116,7 @@ VITE_QR_SERVICE_URL=your_service_here
 ## 🤝 Contributing
 
 This is an open-source project for Algeria. Contributions welcome!
+📖 To understand the community vision, principles, and governance model of Qotaf, please see the [Founding Document](./FOUNDING-DOCUMENT.md).
 
 ## 📄 License
 
