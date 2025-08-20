@@ -120,8 +120,3 @@ This is an open-source project for Algeria. Contributions welcome!
 ## 📄 License
 
 Open source - Built with ❤️ for Algeria
-
----
-
-**إنجاز**: واجهة كاملة جاهزة للتطوير مع نظام تصميم جميل مستوحى من الشعار
-**Achievement**: Complete frontend ready for development with beautiful logo-inspired design system
