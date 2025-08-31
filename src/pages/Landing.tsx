@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Navbar } from '@/components/layout/Navbar';
 import { Logo } from '@/components/qotaf/Logo';
 import { KPICard } from '@/components/qotaf/KPICard';
@@ -6,11 +7,14 @@ import { RoleSelector } from '@/components/qotaf/RoleSelector';
 import { Button } from '@/components/ui/enhanced-button';
 import { Card, CardContent } from '@/components/ui/card';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useAuth } from '@/contexts/AuthContext';
 import { Recycle, Users, Award, MapPin, ArrowRight, Github, Heart } from 'lucide-react';
 import { mockStats, mockLeaderboard } from '@/lib/mock-data';
 
 export const Landing: React.FC = () => {
   const { language, isRTL } = useLanguage();
+  const { user } = useAuth();
+  const navigate = useNavigate();
 
   const handleRoleSelect = (roleId: string) => {
     console.log('Selected role:', roleId);
@@ -68,7 +72,12 @@ export const Landing: React.FC = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-              <Button variant="hero" size="xl" className="w-full sm:w-auto">
+              <Button 
+                variant="hero" 
+                size="xl" 
+                className="w-full sm:w-auto"
+                onClick={() => user ? handleRoleSelect('citizen') : navigate('/auth')}
+              >
                 {language === 'ar' ? 'ابدأ الآن' : 'Get Started'}
                 <ArrowRight className={`h-5 w-5 ${isRTL ? 'rotate-180' : ''}`} />
               </Button>
@@ -194,7 +203,11 @@ export const Landing: React.FC = () => {
                 : 'Join thousands of Algerians contributing to building a better future for our country'
               }
             </p>
-            <Button variant="secondary" size="xl">
+            <Button 
+              variant="secondary" 
+              size="xl"
+              onClick={() => navigate('/auth')}
+            >
               {language === 'ar' ? 'انضم الآن مجاناً' : 'Join Now for Free'}
             </Button>
           </div>
